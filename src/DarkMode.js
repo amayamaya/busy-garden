@@ -5,9 +5,11 @@ export default function DarkMode({ mode, onClick, playSound, buttonSize }) {
     <div className="dayOrNight">
       <p>Mode: {mode === true ? 'Dark' : 'Light'}</p>
       <button style={{ fontSize: `${buttonSize}px` }} onClick={onClick}>
-        🌞 or 🌚
+        🌞 / 🌚
       </button>
-      <button onClick={playSound}>Ambiance</button>
+      <button style={{ fontSize: `${buttonSize}px` }} onClick={playSound}>
+        🧚‍♀️ Ambiance 🧚‍♀️
+      </button>
     </div>
   );
 }

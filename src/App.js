@@ -12,7 +12,7 @@ function App() {
   const [mode, setMode] = useState(false);
   const nightAudio = new Audio('./night.mp3');
   const dayAudio = new Audio('./morning.mp3');
-  const buttonSize = 75;
+  const buttonSize = 50;
 
   function handleTulipClick() {
     plants.push('tulip');
@@ -100,7 +100,6 @@ function App() {
           🏵️ Add Rosettes 🏵️
         </button>
       </div>
-      <p>where the garden grows</p>
       <PlantList plants={plants} />
     </div>
   );

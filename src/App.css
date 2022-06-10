@@ -3,6 +3,17 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background-size: contain;
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
 p {
@@ -12,6 +23,8 @@ p {
 .darkMode {
   background-color: rgb(19, 0, 32);
   color: white;
+  background-size: cover;
+  height: 100%;
 }
 
 .beeVsFlower {
@@ -38,17 +51,22 @@ button {
 }
 
 .darkMode button {
-  color: white;
+  color: rgb(107, 0, 178);
   background-color: rgb(19, 0, 32);
+}
+
+.darkMode p {
+  color: rgb(107, 0, 178);
 }
 
 .garden {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   text-align: center;
   font-size: 6em;
+  margin-bottom: 1em;
 }
 
 .gardenButtons {
