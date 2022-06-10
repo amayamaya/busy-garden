@@ -2,11 +2,13 @@ import './App.css';
 // is the react import below necessary?
 import React from 'react';
 import { useState } from 'react';
+import PlantList from './PlantList';
 
 function App() {
   const [beeSize, setBeeSize] = useState(50);
   const [flowerSize, setFlowerSize] = useState(50);
   const [buttonSize] = useState(75);
+  const [plants, setPlants] = useState(['rosette', 'blossom', 'hibiscus', 'sunflower', 'tulip']);
 
   return (
     <div className="App">
@@ -31,6 +33,13 @@ function App() {
         <button style={{ fontSize: `${buttonSize}px` }}>🌞 or 🌚</button>
       </div>
       <div className="garden"></div>
+      <button>🌷 Add Tulips 🌷</button>
+      <button>🌻 Add Sunflowers 🌻</button>
+      <button>🌺 Add Hibiscus 🌺</button>
+      <button>🌸 Add Blossoms 🌸</button>
+      <button>🏵️ Add Rosettes 🏵️</button>
+      <p>where the garden grows</p>
+      <PlantList plants={plants} />
     </div>
   );
 }
