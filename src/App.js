@@ -10,6 +10,36 @@ function App() {
   const [buttonSize] = useState(75);
   const [plants, setPlants] = useState(['rosette', 'blossom', 'hibiscus', 'sunflower', 'tulip']);
 
+  function handleTulipClick() {
+    plants.push('tulip');
+
+    setPlants(plants.slice());
+  }
+  
+  function handleSunflowerClick() {
+    plants.push('sunflower');
+
+    setPlants(plants.slice());
+  }
+
+  function handleHibiscusClick() {
+    plants.push('hibiscus');
+
+    setPlants(plants.slice());
+  }
+
+  function handleBlossomClick() {
+    plants.push('blossom');
+
+    setPlants(plants.slice());
+  }
+
+  function handleRosetteClick() {
+    plants.push('rosette');
+
+    setPlants(plants.slice());
+  }
+
   return (
     <div className="App">
       <div className="beeVsFlower">
@@ -33,11 +63,11 @@ function App() {
         <button style={{ fontSize: `${buttonSize}px` }}>🌞 or 🌚</button>
       </div>
       <div className="garden"></div>
-      <button>🌷 Add Tulips 🌷</button>
-      <button>🌻 Add Sunflowers 🌻</button>
-      <button>🌺 Add Hibiscus 🌺</button>
-      <button>🌸 Add Blossoms 🌸</button>
-      <button>🏵️ Add Rosettes 🏵️</button>
+      <button onClick={handleTulipClick}>🌷 Add Tulips 🌷</button>
+      <button onClick={handleSunflowerClick}>🌻 Add Sunflowers 🌻</button>
+      <button onClick={handleHibiscusClick}>🌺 Add Hibiscus 🌺</button>
+      <button onClick={handleBlossomClick}>🌸 Add Blossoms 🌸</button>
+      <button onClick={handleRosetteClick}>🏵️ Add Rosettes 🏵️</button>
       <p>where the garden grows</p>
       <PlantList plants={plants} />
     </div>
