@@ -12,15 +12,15 @@ function App() {
       <div className="pollinator">
         <p style={{ fontSize: `${beeSize}px` }}>🐝</p>
         <div className="buttons">
-          <button>Sip Some Juice</button>
-          <button>Serve the Queen</button>
+          <button onClick={() => setBeeSize(beeSize + 20)}>Sip Some Juice</button>
+          <button onClick={() => setBeeSize(beeSize - 20)}>Serve the Queen</button>
         </div>
       </div>
       <div className="pollinator">
         <p style={{ fontSize: `${flowerSize}px` }}>🌻</p>
         <div className="buttons">
-          <button>Gimme that H2O</button>
-          <button>Time to Deadhead</button>
+          <button onClick={() => setFlowerSize(flowerSize + 20)}>Gimme that H2O</button>
+          <button onClick={() => setFlowerSize(flowerSize - 20)}>Time to Deadhead</button>
         </div>
       </div>
     </div>
