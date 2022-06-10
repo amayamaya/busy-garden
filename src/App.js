@@ -6,6 +6,7 @@ import { useState } from 'react';
 function App() {
   const [beeSize, setBeeSize] = useState(50);
   const [flowerSize, setFlowerSize] = useState(50);
+  const [buttonSize] = useState(75);
 
   return (
     <div className="App">
@@ -25,7 +26,11 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="dayOrNight"></div>
+      <div className="dayOrNight">
+        <p>background color shifts on click/ sound plays</p>
+        <button style={{ fontSize: `${buttonSize}px` }}>🌞 or 🌚</button>
+      </div>
+      <div className="garden"></div>
     </div>
   );
 }
