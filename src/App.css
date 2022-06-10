@@ -28,3 +28,19 @@ button {
   background-color: white;
   border: dashed 2px;
 }
+
+.garden {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.gardenButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
