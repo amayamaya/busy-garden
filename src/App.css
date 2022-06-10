@@ -21,3 +21,10 @@
   align-items: center;
   margin: 1em;
 }
+
+button {
+  margin: 1em;
+  color: black;
+  background-color: white;
+  border: dashed 2px;
+}
