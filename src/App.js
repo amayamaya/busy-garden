@@ -40,7 +40,6 @@ function App() {
   }
 
   function handleModeToggleClick() {
-    stopSound();
     setMode(!mode);
   }
 
@@ -52,6 +51,7 @@ function App() {
   }
 
   function playSound() {
+    stopSound();
     if (mode) {
       nightAudio.play();
     } else {
