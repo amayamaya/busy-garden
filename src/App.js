@@ -101,7 +101,7 @@ function App() {
         <CustomButton variant="outlined" className="gardenButtons" onClick={handleHibiscusClick}>
           🌺 Add Hibiscus 🌺
         </CustomButton>
-        <CustomButton variant="outlined"className="gardenButtons" onClick={handleBlossomClick}>
+        <CustomButton variant="outlined" className="gardenButtons" onClick={handleBlossomClick}>
           🌸 Add Blossoms 🌸
         </CustomButton>
         <CustomButton variant="outlined" className="gardenButtons" onClick={handleRosetteClick}>

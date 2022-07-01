@@ -1,11 +1,11 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import App from './App';
 
-test('find grow bee button', () => {
-  render(<App />);
-  const beeElement = screen.getByText(/Sip Some Juice/i);
-  expect(beeElement).toBeInTheDocument();
-});
+// test('find grow bee button', () => {
+//   render(<App />);
+//   const beeElement = screen.getByText(/Sip Some Juice/i);
+//   expect(beeElement).toBeInTheDocument();
+// });
 
 test('if the user clicks 🏵️ Add Rosettes 🏵️ button, there should be one more rosette on the screen', () => {
   render(<App />);

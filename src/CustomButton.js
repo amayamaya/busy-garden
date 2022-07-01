@@ -3,16 +3,18 @@ import Button from '@mui/material/Button';
 // import { useGradientButtonStyles } from '@mui-treasury/styles/button/gradient';
 // import { usePushingGutterStyles } from '@mui-treasury/styles/gutter/pushing';
 
-const CustomButton = ({ variant, onClick, children }) => {
+export default function CustomButton({
+  variant,
+  onClick,
+  children,
+  coolColor = 'plum',
+  coolBg = 'palegreen',
+}) {
   //   const styles = useCustomButtonStyles();
   //   const gutterStyles = usePushingGutterStyles({ cssProp: 'marginBottom', space: 2 });
   return (
-    <div>
-      <div>
-        <Button variant={variant} onClick={onClick}>{children}</Button>
-      </div>
-    </div>
+    <Button variant={variant} onClick={onClick} sx={{ color: coolColor, background: coolBg }}>
+      {children}
+    </Button>
   );
-};
-
-export default CustomButton;
+}
