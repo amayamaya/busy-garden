@@ -1,15 +1,16 @@
 import React from 'react';
+import CustomButton from './CustomButton';
 
 export default function DarkMode({ mode, onClick, playSound, buttonSize }) {
   return (
     <div className="dayOrNight">
       <p>{mode === true ? 'Dark' : 'Light'}</p>
-      <button style={{ fontSize: `${buttonSize}px` }} onClick={onClick}>
+      <CustomButton variant="outlined" style={{ fontSize: `${buttonSize}px` }} onClick={onClick}>
         🌞 or 🌚
-      </button>
-      <button style={{ fontSize: `${buttonSize}px` }} onClick={playSound}>
+      </CustomButton>
+      <CustomButton variant="outlined" style={{ fontSize: `${buttonSize}px` }} onClick={playSound}>
         🧚‍♀️ Ambiance 🧚‍♀️
-      </button>
+      </CustomButton>
     </div>
   );
 }

@@ -4,6 +4,7 @@ import React from 'react';
 import { useState } from 'react';
 import PlantList from './PlantList';
 import DarkMode from './DarkMode';
+import CustomButton from './CustomButton';
 
 function App() {
   const [beeSize, setBeeSize] = useState(50);
@@ -12,7 +13,7 @@ function App() {
   const [mode, setMode] = useState(false);
   const nightAudio = new Audio('./night.mp3');
   const dayAudio = new Audio('./morning.mp3');
-  const buttonSize = 50;
+  const [buttonSize] = useState(50);
 
   function handleTulipClick() {
     plants.push('tulip');
@@ -58,22 +59,29 @@ function App() {
       dayAudio.play();
     }
   }
-
   return (
     <div className={mode === false ? 'App' : 'App darkMode'}>
       <div className="beeVsFlower">
         <div className="pollinators">
           <p style={{ fontSize: `${beeSize}px` }}>🐝</p>
           <div className="buttons">
-            <button onClick={() => setBeeSize(beeSize + 20)}>Sip Some Juice</button>
-            <button onClick={() => setBeeSize(beeSize - 20)}>Serve the Queen</button>
+            <CustomButton variant="outlined" onClick={() => setBeeSize(beeSize + 20)}>
+              Sip the Juice
+            </CustomButton>
+            <CustomButton variant="outlined" onClick={() => setBeeSize(beeSize - 20)}>
+              Serve the Queen
+            </CustomButton>
           </div>
         </div>
         <div className="pollinators">
           <p style={{ fontSize: `${flowerSize}px` }}>🌻</p>
           <div className="buttons">
-            <button onClick={() => setFlowerSize(flowerSize + 20)}>Gimme that H2O</button>
-            <button onClick={() => setFlowerSize(flowerSize - 20)}>Time to Deadhead</button>
+            <CustomButton variant="outlined" onClick={() => setFlowerSize(flowerSize + 20)}>
+              Gimme that H2O
+            </CustomButton>
+            <CustomButton variant="outlined" onClick={() => setFlowerSize(flowerSize - 20)}>
+              Time to Deadhead
+            </CustomButton>
           </div>
         </div>
       </div>
@@ -84,21 +92,21 @@ function App() {
         onClick={handleModeToggleClick}
       />
       <div className="garden">
-        <button className="gardenButtons" onClick={handleTulipClick}>
+        <CustomButton variant="outlined" className="gardenButtons" onClick={handleTulipClick}>
           🌷 Add Tulips 🌷
-        </button>
-        <button className="gardenButtons" onClick={handleSunflowerClick}>
+        </CustomButton>
+        <CustomButton variant="outlined" className="gardenButtons" onClick={handleSunflowerClick}>
           🌻 Add Sunflowers 🌻
-        </button>
-        <button className="gardenButtons" onClick={handleHibiscusClick}>
+        </CustomButton>
+        <CustomButton variant="outlined" className="gardenButtons" onClick={handleHibiscusClick}>
           🌺 Add Hibiscus 🌺
-        </button>
-        <button className="gardenButtons" onClick={handleBlossomClick}>
+        </CustomButton>
+        <CustomButton variant="outlined"className="gardenButtons" onClick={handleBlossomClick}>
           🌸 Add Blossoms 🌸
-        </button>
-        <button className="gardenButtons" onClick={handleRosetteClick}>
+        </CustomButton>
+        <CustomButton variant="outlined" className="gardenButtons" onClick={handleRosetteClick}>
           🏵️ Add Rosettes 🏵️
-        </button>
+        </CustomButton>
       </div>
       <PlantList plants={plants} />
     </div>
