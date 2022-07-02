@@ -1,7 +1,10 @@
 import React from 'react';
+import MyTable from './MyTable';
 
 export default function AdminPage() {
   return (
-    <div>Admin</div>
+    <div>
+      <MyTable />
+    </div>
   );
 }
