@@ -1,10 +1,10 @@
 import MaterialTable from 'material-table';
 import { customers } from './data.js';
-console.log(customers);
+// console.log(customers);
 
 export default function MyTable() {
   return (
-    <div style={{ maxWidth: '100%' }}>
+    <div className='floralEnthusiasts' style={{ maxWidth: '100%' }}>
       <MaterialTable
         columns={[
           { title: 'Username', field: 'id' },

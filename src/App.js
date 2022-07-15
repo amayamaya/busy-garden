@@ -1,22 +1,19 @@
-import './App.css';
-// is the react import below necessary?
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AdminPage from './AdminPage';
 import Main from './Main';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+
+import './App.css';
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Routes>
-          <Route path="/">
-            <Route index element={<Main />} />
-            <Route path="admin" element={<AdminPage />} />
-          </Route>
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <Router>
+      <Link to="/admin">Admin</Link>
+
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="admin" element={<AdminPage />} />
+      </Routes>
+    </Router>
   );
 }
 

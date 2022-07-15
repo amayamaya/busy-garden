@@ -92,3 +92,14 @@ button {
   align-items: center;
   text-align: center;
 }
+
+.chartOne {
+  border: 4px dashed fuchsia;
+  height: 300px;
+  width: 800px;
+  margin: 100px;
+}
+
+.floralEnthusiasts {
+  margin: 100px;
+}
