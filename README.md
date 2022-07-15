@@ -1,25 +1,15 @@
-# Alchemy React Base Template
+Critter Pavilion
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<section>bee vs sunflower
+    <div>honeybee</div>
+        <button onClick={() => setsBeeSize(beeSize + 1)}>
+        Sip the juice
+        <button>Serve the Queen
+    <div>sunflower</div>
+        <button>Gimmie that h2o
+        <button>Time to deadhead
 
-Use this template for all your "from scratch" deliverables. To start, simply run
-
-- `npm install`
-- `npm start`
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<section>Daytime nighttime Toggle
+    <div> shows sun or moon emoji on click
+<section>Add to your garden 
+    <div> all the flower buttons (nice n big)
